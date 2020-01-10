@@ -13,14 +13,27 @@ class ToDo {
 
 writeDown = () => {
     const item = document.createElement("div");
-    item.classList.add("item");
-    item.contentEditable="true";
+    item.className="item"
+    listOf.appendChild(item);
+
+    const itemText = document.createElement("div");
+    itemText.classList.add("item-text");
+    itemText.contentEditable="true";
     const userDescription = document.querySelector("#text").value;
     const li = new ToDo(userDescription)
     console.log(li.description);
 
-    item.innerHTML = `${li.description}`;
-    listOf.appendChild(item);
+    itemText.innerHTML = `${li.description}`;
+    const can = document.createElement("div");
+    can.className="smallbtn"
+    can.innerHTML=`<i class="far fa-trash-alt"></i>`
+    const vee = document.createElement("div");
+    vee.className="smallbtn"
+    vee.innerHTML=`<i class="far fa-circle"></i>`
+    item.appendChild(can);
+    item.appendChild(vee);
+    item.appendChild(itemText);
+
 
 }
 const doIt = document.querySelector(".btn");
