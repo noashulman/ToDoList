@@ -13,11 +13,12 @@ body {
 }
 
 .container{
-    height:100vh;
+    min-height:100vh;
     width:100%;
     background-image: url(./images/note2.svg);
     background-position:center;
     background-size:cover;
+    background-attachment: scroll;
     display: flex;
     flex-direction: column;
 }
@@ -138,6 +139,12 @@ input:focus{
     border-bottom: 1px solid #757575;
 }
 
+.can.far, .vee.far{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media screen and (max-width: 768px){
     .user-text{
@@ -156,7 +163,7 @@ input:focus{
     }
 
     .btn{
-        height:80%;
+        height:100%;
         width:21%;
     }
 
