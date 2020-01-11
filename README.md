@@ -11,8 +11,9 @@ in Appleseeds Front-end Developers bootcamp.
 This project is simple to do list generator.The user can write down his task,
 then press "do it" button and get the item written on a note.
 Each item can be marked as done, or can be deleted.
-Items are draggable.
-The app is responsive, suitable for mobile.
+An "are you sure" dialog box pops up before deletion.
+Items are draggable, I used Sortable library: https://github.com/SortableJS/Sortable#cdn
+
 	
 ## Technologies
 Project is created with:
@@ -25,3 +26,4 @@ no install is needed.
 
 ## bugs
 I would like my app to have fixed headers, but could not make the Z-index work.
+It seems that the draggability does not work on mobile version ):
