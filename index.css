@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    height:100%;
 }
 
 body {
@@ -8,12 +9,12 @@ body {
     height:100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
     color:#2D2D2D;
 }
 
 .container{
-    min-height:100vh;
+    height:100vh;
     width:100%;
     background-image: url(./images/note2.svg);
     background-position:center;
@@ -21,12 +22,17 @@ body {
     background-attachment: scroll;
     display: flex;
     flex-direction: column;
-}
+    overflow:auto;
 
+    
+}
 .head{
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     height:10%;
+    width:100%;
+    /* position:fixed;
+    z-index: 10; */
 }
 
 
@@ -34,6 +40,9 @@ body {
     height:10%;
     width:100%;
     display: flex;
+    /* position: fixed;
+    top:64px;
+    z-index: 10; */
 }
 
 .list{
@@ -42,6 +51,10 @@ body {
     display:flex;
     flex-direction: column;
     align-items: center;
+    /* position: relative;
+    top: 128px; */
+    list-style-type: none;
+    
 
 }
 
@@ -105,7 +118,7 @@ input:focus{
 }
 
 .item{
-    height:10%;
+    height:3rem;
     width:90%;
     display: flex;
     justify-content: flex-start;
@@ -119,7 +132,7 @@ input:focus{
     
 } */
 .item-text{
-    width:70%;
+    width:80%;
     height:100%;
     display: flex;
     justify-content: start;
@@ -127,7 +140,7 @@ input:focus{
 }
 
 .smallbtn{
-    width:15%;
+    width:10%;
     height:100%;
     display:flex;
     justify-content: center;
@@ -174,3 +187,11 @@ input:focus{
     }
    
 }
+
+.ghost {
+    opacity: 0.4;
+  }
+ 
+  
+
+
