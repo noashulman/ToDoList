@@ -1,7 +1,7 @@
 # ToDoList
 A to do list simple app.
 
-##Motivation
+## Motivation
 This is my first app!it's been done in two days.
 It was built in order to show what I have been learning for the past month,
 in Appleseeds Front-end Developers bootcamp.
@@ -23,5 +23,5 @@ Project is created with:
 ## Setup
 no install is needed.
 
-##bugs
+## bugs
 I would like my app to have fixed headers, but could not make the Z-index work.
