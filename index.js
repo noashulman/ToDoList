@@ -41,10 +41,28 @@ writeDown = () => {
     const cans = document.querySelectorAll(".can");
     cans.forEach(can => {
         can.addEventListener("click", deleteItem)
-        
-
+       can.addEventListener("click", openModal = () =>{
+        const modal = document.getElementById("myModal")
+        modal.style.display = "flex"; 
+       })
         
     });
+
+    const no = document.querySelector(".btn.no")
+    no.addEventListener("click",closeModal = () =>{
+        const modal = document.getElementById("myModal")
+        modal.style.display = "none"; 
+       })
+
+    const deletebtn = document.querySelector(".btn.delete")
+       deletebtn.addEventListener("click",closeModalAndDelete = () =>{
+           const modal = document.getElementById("myModal")
+           modal.style.display = "none"; 
+           deleteItemFlag === true
+          })
+
+
+
 
     const vees = document.querySelectorAll(".vee");
     vees.forEach(vee => {
@@ -62,8 +80,10 @@ writeDown = () => {
 }
 
 deleteItem = (event) => {
+    if (deleteItemFlag === true){
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
-
+    deleteItemFlag=false
+    }
 
 }
 
@@ -89,6 +109,7 @@ const listOf = document.querySelector(".list")
 
 
 let flagComplete = true;
+let deleteItemFlag = false;
 
 
 
